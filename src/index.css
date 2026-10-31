@@ -1,0 +1,205 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: #f4f5f7;
+  color: #1f2933;
+  font-family: system-ui, -apple-system, 'Segoe UI', 'Hiragino Sans', 'Yu Gothic UI', sans-serif;
+  line-height: 1.6;
+}
+
+h1,
+h2,
+p {
+  margin: 0;
+}
+
+button {
+  border: none;
+  border-radius: 6px;
+  font: inherit;
+  cursor: pointer;
+}
+
+.loading {
+  padding: 48px 16px;
+  text-align: center;
+}
+
+.message {
+  padding: 8px 12px;
+  border-radius: 6px;
+  font-size: 14px;
+}
+
+.message.error {
+  background: #fdecea;
+  color: #a12622;
+}
+
+.message.success {
+  background: #e6f4ea;
+  color: #1e6b34;
+}
+
+/* ログイン・会員登録画面 */
+.auth-page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 16px;
+}
+
+.auth-form {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  width: 100%;
+  max-width: 380px;
+  padding: 32px 24px;
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 1px 4px rgb(0 0 0 / 12%);
+}
+
+.auth-form h1 {
+  margin-bottom: 16px;
+  font-size: 22px;
+}
+
+.auth-form label {
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.auth-form input {
+  margin-bottom: 8px;
+  padding: 10px 12px;
+  border: 1px solid #c3cad3;
+  border-radius: 6px;
+  font: inherit;
+}
+
+.auth-form button {
+  margin-top: 8px;
+  padding: 10px;
+  background: #1f5fbf;
+  color: #fff;
+  font-weight: 600;
+}
+
+.auth-form button:disabled {
+  opacity: 0.6;
+  cursor: default;
+}
+
+.auth-link {
+  margin-top: 12px;
+  font-size: 14px;
+  text-align: center;
+}
+
+/* 物件一覧画面 */
+.app-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+  padding: 12px 24px;
+  background: #fff;
+  box-shadow: 0 1px 3px rgb(0 0 0 / 10%);
+}
+
+.app-title {
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+.app-user {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  min-width: 0;
+}
+
+.user-email {
+  overflow: hidden;
+  font-size: 14px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.logout-button {
+  flex-shrink: 0;
+  padding: 6px 12px;
+  background: #e4e7eb;
+  color: #1f2933;
+  font-size: 14px;
+}
+
+.properties-page {
+  max-width: 1080px;
+  margin: 0 auto;
+  padding: 24px;
+}
+
+.properties-page h1 {
+  margin-bottom: 16px;
+  font-size: 22px;
+}
+
+.properties-page .message {
+  margin-bottom: 16px;
+}
+
+.property-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 16px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.property-card {
+  padding: 20px;
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 1px 4px rgb(0 0 0 / 12%);
+}
+
+.property-card h2 {
+  margin-bottom: 12px;
+  font-size: 17px;
+}
+
+.property-label {
+  display: inline-block;
+  width: 56px;
+  color: #616e7c;
+  font-size: 13px;
+  font-weight: 400;
+}
+
+.property-rent {
+  color: #1f5fbf;
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.property-area {
+  font-size: 14px;
+}
+
+@media (max-width: 480px) {
+  .app-header {
+    padding: 12px 16px;
+  }
+
+  .properties-page {
+    padding: 16px;
+  }
+}
