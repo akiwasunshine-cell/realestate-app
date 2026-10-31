@@ -146,9 +146,95 @@ button {
   padding: 24px;
 }
 
-.properties-page h1 {
+.page-heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
   margin-bottom: 16px;
+}
+
+.page-heading h1 {
   font-size: 22px;
+}
+
+.primary-button,
+.secondary-button,
+.danger-button {
+  padding: 8px 14px;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.primary-button {
+  background: #1f5fbf;
+  color: #fff;
+}
+
+.secondary-button {
+  background: #e4e7eb;
+  color: #1f2933;
+}
+
+.danger-button {
+  background: #fdecea;
+  color: #a12622;
+}
+
+.primary-button:disabled,
+.secondary-button:disabled,
+.danger-button:disabled {
+  opacity: 0.6;
+  cursor: default;
+}
+
+.empty-message {
+  padding: 48px 16px;
+  color: #616e7c;
+  text-align: center;
+}
+
+.load-error {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 12px;
+}
+
+.new-property {
+  max-width: 480px;
+  margin-bottom: 16px;
+}
+
+.property-form {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.property-form h2 {
+  margin-bottom: 4px;
+}
+
+.property-form label {
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.property-form input {
+  width: 100%;
+  margin-bottom: 4px;
+  padding: 8px 10px;
+  border: 1px solid #c3cad3;
+  border-radius: 6px;
+  font: inherit;
+}
+
+.form-actions,
+.card-actions {
+  display: flex;
+  gap: 8px;
+  margin-top: 12px;
 }
 
 .properties-page .message {
@@ -190,7 +276,7 @@ button {
   font-weight: 700;
 }
 
-.property-area {
+.property-detail {
   font-size: 14px;
 }
 

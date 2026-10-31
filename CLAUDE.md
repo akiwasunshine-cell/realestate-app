@@ -1,6 +1,6 @@
 # realestate-app
 
-Supabase認証付きの不動産管理Webアプリ。物件データは現時点ではダミー（`src/data/properties.js`）。
+Supabase認証付きの不動産管理Webアプリ。ログインしたユーザーが自分の物件を登録・編集・削除できる。
 
 ## 技術スタック
 
@@ -15,7 +15,8 @@ React + Vite（JavaScript）、React Router、Supabase（`@supabase/supabase-js`
 
 ## セットアップ
 
-`.env.example` を `.env` にコピーし、SupabaseのProject URLとPublishable keyを設定する。
+1. `.env.example` を `.env` にコピーし、SupabaseのProject URLとPublishable keyを設定する。
+2. `supabase/migrations/` のSQLを、SupabaseのSQL Editorで古いファイルから順に実行する。
 
 ## 構成
 
@@ -23,6 +24,8 @@ React + Vite（JavaScript）、React Router、Supabase（`@supabase/supabase-js`
 - `src/components/`: `ProtectedRoute`（要ログイン）と `PublicOnlyRoute`（ログイン済みなら物件一覧へ転送）。ログイン後やログアウト後の画面遷移はこの2つが担うため、各ページでは遷移処理を書かない
 - `src/pages/`: ログイン、会員登録、物件一覧の各画面
 - `src/lib/authErrors.js`: Supabaseのエラーコードと日本語メッセージの対応表
+- `src/lib/propertiesApi.js`: 物件テーブルのCRUD。アクセス制御はRLSが担うため、クライアント側で `user_id` を絞り込まない
+- `supabase/migrations/`: テーブル定義とRLSポリシーのSQL
 
 ## コーディング規約
 
