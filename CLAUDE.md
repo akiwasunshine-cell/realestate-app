@@ -31,6 +31,11 @@ React + Vite（JavaScript）、React Router、Supabase（`@supabase/supabase-js`
 
 - コメントは日本語で記載する。
 
+## デプロイ情報
+
+- 本番URL：https://realestate-app-4o8n.vercel.app
+- Supabaseプロジェクト名：realestate-app-4o8n
+
 ## Git運用ルール
 
 - コードを変更するたびに、コミットしてGitHubにプッシュする。ユーザーからの個別の指示は待たない。
